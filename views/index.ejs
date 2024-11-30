@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <ul>
+        <% todos.forEach((todo, index) => { %>
+            <li>
+                <!-- Checkbox Form -->
+                
+                <form action="/toggle" method="POST" style="display:inline;">
+                    <input type="hidden" name="index" value="<%= index %>">
+                    <input 
+                        type="checkbox"
+                        name="completed" 
+                        <%= todo.completed ? 'checked' : '' %> 
+                        onchange="this.form.submit()" /> <!-- Submit the form on toggle -->
+                </form>
+                
+                <!-- Task Name -->
+                <span class="<%= todo.completed ? 'completed' : '' %>">
+                    <%= todo.task || todo %> <!-- Display task name -->
+                </span>
+                
+                <!-- Delete Icon -->
+                <form action="/delete" method="POST" style="display:inline;">
+                    <input type="hidden" name="index" value="<%= index %>">
+                    <button type="submit" class="delete-btn">🗑️</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/add">Add New Todo</a>
+</body>
+</html>

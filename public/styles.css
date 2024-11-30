@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-left: 10px;
+    color: red;
+}
+
+.completed {
+    text-decoration: line-through; /* Strikethrough effect */
+    color: black; /* Optional: Change color when completed */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.delete-btn {
+    cursor: pointer;
+    font-size: 20px;
+}
