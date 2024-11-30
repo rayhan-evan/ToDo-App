@@ -11,20 +11,17 @@
     <ul>
         <% todos.forEach((todo, index) => { %>
             <li>
-                <!-- Checkbox Form -->
-                
+                <!-- Form to toggle completion status -->
                 <form action="/toggle" method="POST" style="display:inline;">
                     <input type="hidden" name="index" value="<%= index %>">
-                    <input 
-                        type="checkbox"
-                        name="completed" 
+                    <input type="checkbox" name="completed" 
                         <%= todo.completed ? 'checked' : '' %> 
-                        onchange="this.form.submit()" /> <!-- Submit the form on toggle -->
+                        onchange="this.form.submit()"> <!-- Submit the form when checkbox is clicked -->
                 </form>
-                
-                <!-- Task Name -->
+
+                <!-- Task name with strikethrough if completed -->
                 <span class="<%= todo.completed ? 'completed' : '' %>">
-                    <%= todo.task || todo %> <!-- Display task name -->
+                    <%= todo.task || todo %> <!-- Display the task name -->
                 </span>
                 
                 <!-- Delete Icon -->

@@ -1,43 +1,132 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-}
-
-h1 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
 }
 
+/* Header Styles */
+h1 {
+    color: #444;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* List Styles */
 ul {
     list-style-type: none;
     padding: 0;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
 }
 
 li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
+    padding: 15px;
     font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
+li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Checkbox and Task Text */
+input[type="checkbox"] {
+    margin-right: 15px;
+    cursor: pointer;
+    accent-color: #4CAF50; /* Green color for checked state */
+}
+
+span {
+    flex-grow: 1;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Completed Tasks */
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Buttons */
 button {
-    background: none;
+    background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 18px;
-    padding: 0;
-    margin-left: 10px;
-    color: red;
+    font-size: 1.2em;
+    color: #e74c3c;
+    transition: color 0.3s ease;
 }
 
-.completed {
-    text-decoration: line-through; /* Strikethrough effect */
-    color: black; /* Optional: Change color when completed */
+button:hover {
+    color: #c0392b;
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
+/* Delete Button */
 .delete-btn {
-    cursor: pointer;
-    font-size: 20px;
+    font-size: 1.4em;
+}
+
+/* Add Todo Link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    ul {
+        padding: 0 10px;
+    }
+
+    li {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .delete-btn, button {
+        font-size: 1.1em;
+    }
+
+    a {
+        font-size: 1em;
+    }
 }
