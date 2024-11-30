@@ -15,24 +15,21 @@ A simple and user-friendly **Todo App** built using **Node.js**, **Express**, an
 - **CSS**: For styling the application.
 
 ## Installation
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/todo-app.git
+# Clone the Repository
+git clone https://github.com/your-username/todo-app.git
 
-## Navigate to the Project Directory:
-```bash```
+# Navigate to the Project Directory
 cd todo-app
 
-## Install Dependencies:
-```bash```
+# Install Dependencies
 npm install
 
-## Run the Application:
-```bash```
+# Run the Application
 node app.js
 
-## Access the App:
-Open your browser and navigate to http://localhost:3000.
+# Access the App
+# Open your browser and navigate to:
+http://localhost:3000
 
 ## How to Use
 Open the app in your browser.
@@ -41,7 +38,7 @@ Toggle tasks as completed or pending by checking/unchecking the checkbox.
 Remove tasks by clicking the trash icon.
 
 ##Folder Structure
-```bash```
+
 todo-app/
 ├── public/
 │   ├── styles.css         # CSS for styling
@@ -62,15 +59,15 @@ Contributions are welcome! To contribute:
 
 ## Fork this repository.
 Create a feature branch:
-```bash```
+
 git checkout -b feature-name
 
 Commit your changes:
-```bash```
+
 git commit -m 'Add new feature'
 
 Push to the branch:
-```bash```
+
 git push origin feature-name
 
 Open a pull request.
